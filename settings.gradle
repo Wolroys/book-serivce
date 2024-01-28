@@ -2,4 +2,5 @@ rootProject.name = 'booking-service'
 
 includeBuild 'booking-server'
 includeBuild 'booking-config'
-
+includeBuild 'booking-entity'
+includeBuild 'resources-service'
