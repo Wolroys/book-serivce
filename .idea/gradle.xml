@@ -4,32 +4,6 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
-        <compositeConfiguration>
-          <compositeBuild compositeDefinitionSource="SCRIPT">
-            <builds>
-              <build path="$PROJECT_DIR$/booking-config" name="booking-config">
-                <projects>
-                  <project path="$PROJECT_DIR$/booking-config" />
-                </projects>
-              </build>
-              <build path="$PROJECT_DIR$/booking-entity" name="booking-entity">
-                <projects>
-                  <project path="$PROJECT_DIR$/booking-entity" />
-                </projects>
-              </build>
-              <build path="$PROJECT_DIR$/booking-server" name="booking-server">
-                <projects>
-                  <project path="$PROJECT_DIR$/booking-server" />
-                </projects>
-              </build>
-              <build path="$PROJECT_DIR$/resources-service" name="resources-service">
-                <projects>
-                  <project path="$PROJECT_DIR$/resources-service" />
-                </projects>
-              </build>
-            </builds>
-          </compositeBuild>
-        </compositeConfiguration>
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="gradleHome" value="" />
         <option name="modules">

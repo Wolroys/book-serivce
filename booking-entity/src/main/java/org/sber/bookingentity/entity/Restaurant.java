@@ -1,7 +1,6 @@
 package org.sber.bookingentity.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -13,4 +12,12 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Entity
 public class Restaurant extends Resource{
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String cuisineType;
+
+    private int seatingCapacity;
 }
