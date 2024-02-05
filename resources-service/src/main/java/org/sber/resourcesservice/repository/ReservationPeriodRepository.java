@@ -6,6 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
+import java.time.LocalDateTime;
 import java.time.ZonedDateTime;
 import java.util.List;
 import java.util.Optional;
@@ -17,8 +18,8 @@ public interface ReservationPeriodRepository extends JpaRepository<ReservationPe
             "WHERE r.resourceId = :resourceId " +
             "AND r.startTime <= :endTime " +
             "AND r.endTime >= :startTime")
-    Optional<ReservationPeriod> findOverlappingReservations(Long resourceId, ZonedDateTime startTime,
-                                                            ZonedDateTime endTime);
+    Optional<ReservationPeriod> findOverlappingReservations(Long resourceId, LocalDateTime startTime,
+                                                            LocalDateTime endTime);
 
     List<ReservationPeriod> findAllByUserId(Long userId);
 
@@ -28,5 +29,5 @@ public interface ReservationPeriodRepository extends JpaRepository<ReservationPe
             "WHERE r.resourceId = :resourceId " +
             "AND r.endTime > :startTime " +
             "ORDER BY r.startTime ASC")
-    Optional<ReservationPeriod> findNextAvailableReservation(Long resourceId, ZonedDateTime startTime);
+    Optional<ReservationPeriod> findNextAvailableReservation(Long resourceId, LocalDateTime startTime);
 }

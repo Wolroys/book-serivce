@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.time.LocalDateTime;
 import java.time.ZonedDateTime;
 
 @RequiredArgsConstructor
@@ -19,8 +20,8 @@ public class ReservationController {
     private final ReservationService reservationService;
 
     @PostMapping("/acquire")
-    public ResponseEntity<Long> acquireResource(@RequestBody Long userId, @RequestBody Long resourceId, @RequestBody ZonedDateTime startTime,
-                                                @RequestBody ZonedDateTime endTime){
+    public ResponseEntity<Long> acquireResource(@RequestBody Long userId, @RequestBody Long resourceId, @RequestBody LocalDateTime startTime,
+                                                @RequestBody LocalDateTime endTime){
 
         Long reservationId = reservationService.acquire(userId, resourceId, startTime, endTime);
 

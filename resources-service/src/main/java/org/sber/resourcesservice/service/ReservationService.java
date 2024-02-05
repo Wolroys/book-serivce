@@ -7,6 +7,7 @@ import org.sber.resourcesservice.repository.ReservationPeriodRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.time.LocalDateTime;
 import java.time.ZonedDateTime;
 import java.util.List;
 import java.util.Optional;
@@ -19,7 +20,7 @@ public class ReservationService {
     private final ReservationPeriodRepository reservationRepository;
 
     @Transactional
-    public Long acquire(Long userId, Long resourceId, ZonedDateTime startTime, ZonedDateTime endTime){
+    public Long acquire(Long userId, Long resourceId, LocalDateTime startTime, LocalDateTime endTime){
         Optional<ReservationPeriod> existedReservation = reservationRepository.
                 findOverlappingReservations(resourceId, startTime, endTime);
 
@@ -60,7 +61,7 @@ public class ReservationService {
         return reservationRepository.findAllByResourceId(resourceId);
     }
 
-    public Optional<ReservationPeriod> findNextAvailableReservation(Long resourceId, ZonedDateTime startTime){ //ZonedDateTime
+    public Optional<ReservationPeriod> findNextAvailableReservation(Long resourceId, LocalDateTime startTime){
         return reservationRepository.findNextAvailableReservation(resourceId, startTime);
     }
 }

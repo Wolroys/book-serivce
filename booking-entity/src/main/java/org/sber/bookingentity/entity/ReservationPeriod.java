@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDateTime;
 import java.time.ZonedDateTime;
 
 @Data
@@ -23,11 +24,7 @@ public class ReservationPeriod{
 
     private Long resourceId;
 
-    @ManyToOne
-    @JoinColumn(name = "resource_id")
-    private Resource resource;
+    private LocalDateTime startTime;
 
-    private ZonedDateTime startTime;
-
-    private ZonedDateTime endTime;
+    private LocalDateTime endTime;
 }

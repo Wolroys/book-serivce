@@ -16,38 +16,6 @@
           </set>
         </option>
       </GradleProjectSettings>
-      <GradleProjectSettings>
-        <option name="externalProjectPath" value="$PROJECT_DIR$/booking-config" />
-        <option name="modules">
-          <set>
-            <option value="$PROJECT_DIR$/booking-config" />
-          </set>
-        </option>
-      </GradleProjectSettings>
-      <GradleProjectSettings>
-        <option name="externalProjectPath" value="$PROJECT_DIR$/booking-entity" />
-        <option name="modules">
-          <set>
-            <option value="$PROJECT_DIR$/booking-entity" />
-          </set>
-        </option>
-      </GradleProjectSettings>
-      <GradleProjectSettings>
-        <option name="externalProjectPath" value="$PROJECT_DIR$/booking-server" />
-        <option name="modules">
-          <set>
-            <option value="$PROJECT_DIR$/booking-server" />
-          </set>
-        </option>
-      </GradleProjectSettings>
-      <GradleProjectSettings>
-        <option name="externalProjectPath" value="$PROJECT_DIR$/resources-service" />
-        <option name="modules">
-          <set>
-            <option value="$PROJECT_DIR$/resources-service" />
-          </set>
-        </option>
-      </GradleProjectSettings>
     </option>
   </component>
 </project>

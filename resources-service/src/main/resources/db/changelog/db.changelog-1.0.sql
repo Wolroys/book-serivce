@@ -44,6 +44,6 @@ create table if not exists reservation_period(
     id bigserial primary key,
     user_id bigint,
     resource_id bigint references resource(id),
-    start_time varchar(255) not null,
-    end_time varchar(255) not null
+    start_time timestamp not null,
+    end_time timestamp not null
 );
